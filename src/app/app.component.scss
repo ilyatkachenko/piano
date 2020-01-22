@@ -1,0 +1,75 @@
+.piano {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 70%;
+  height: 40%;
+  border: 3px solid #000;
+
+  &__tile {
+    width: calc(100% / 14);
+    height: 100%;
+    border: 2px solid #000;
+    cursor: pointer;
+
+    &_sharp {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      height: 70%;
+      width: calc(100% / 22);
+      transition: .1s ease-in-out;
+
+      &:nth-of-type(2) {
+        left: 4.8%;
+      }
+
+      &:nth-of-type(4) {
+        left: 12%;
+      }
+
+      &:nth-of-type(7) {
+        left: 26.3%;
+      }
+
+      &:nth-of-type(9) {
+        left: 33.4%;
+      }
+
+      &:nth-of-type(11) {
+        left: 40.5%;
+      }
+
+      &:nth-of-type(14) {
+        left: 55%;
+      }
+
+      &:nth-of-type(16) {
+        left: 62.1%;
+      }
+
+      &:nth-of-type(19) {
+        left: 76.3%;
+      }
+
+      &:nth-of-type(21) {
+        left: 83.4%;
+      }
+
+      &:nth-of-type(23) {
+        left: 90.5%;
+      }
+    }
+
+    &_active {
+      background-color: gray;
+    }
+
+    audio {
+      display: none;
+    }
+  }
+}
